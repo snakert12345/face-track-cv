@@ -4,6 +4,8 @@
 
 using namespace cv;
 
+CvFont* font;
+
 VideoCapture getCapture(int camNum)
 {
 	VideoCapture vcap;
@@ -22,6 +24,8 @@ int main(int argc, char* args[])
 	{
 		resize(img, img, Size(800, 600));
 		rotate(img, img, 1.0f);
+		
+		putText(img, "Are you quaduple sure?", Point(10, 10), FONT_HERSHEY_PLAIN, 1.0f, Scalar(255, 255, 255));
 
 		imshow("win", img);
 		
