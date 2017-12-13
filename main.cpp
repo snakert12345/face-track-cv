@@ -4,8 +4,6 @@
 
 using namespace cv;
 
-CvFont* font;
-
 VideoCapture getCapture(int camNum)
 {
 	VideoCapture vcap;
